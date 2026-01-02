@@ -1,0 +1,161 @@
+.files-window {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 820px;
+    height: 520px;
+
+    background: rgba(0, 0, 0, 0.96);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+/* MAXIMIZE – SAME AS BROWSER */
+.files-window.maximized {
+    top: 50px;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: calc(100% - 140px);
+    border-radius: 0;
+}
+
+/* HEADER */
+.files-header {
+    height: 40px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.files-title {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* WINDOW BUTTONS */
+.window-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn.red {
+    background: #ff5f56;
+}
+
+.btn.yellow {
+    background: #ffbd2e;
+}
+
+.btn.green {
+    background: #27c93f;
+}
+
+/* BODY */
+.files-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    color: #eaeaea;
+}
+
+/* DARK SCROLLBAR */
+.files-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.files-body::-webkit-scrollbar-track {
+    background: #0b0b0b;
+}
+
+.files-body::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+.files-body::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* CONTENT */
+.folder-title {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* TAGS */
+.tags {
+    margin: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* VIEW CODE BUTTON */
+.view-code-btn {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: inline-block;
+}
+
+.view-code-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* ACADEMIC TAG */
+.academic-tag {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ddd;
+}

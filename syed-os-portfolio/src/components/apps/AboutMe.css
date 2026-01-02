@@ -1,0 +1,334 @@
+.about-window {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 560px;
+    background: radial-gradient(circle at top, #111, #000 80%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+.about-window.maximized {
+    top: 40px;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 120px);
+}
+
+/* HEADER */
+.about-header {
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-title {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* BODY */
+.about-body {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+/* PROFILE */
+.about-profile {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.about-profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(255, 180, 92, 0.4);
+}
+
+.about-profile h1 {
+    margin-top: 14px;
+    color: #ffb45c;
+}
+
+.role {
+    color: #aaa;
+}
+
+/* CARD */
+.about-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+}
+
+.about-card h3 {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* SKILLS */
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ccc;
+    font-size: 13px;
+}
+
+/* CONNECT */
+.connect-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    color: #aaa;
+}
+
+.connect-grid a {
+    color: #ff9f3f;
+    text-decoration: none;
+}
+
+/* TERMINAL */
+.about-terminal {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 14px;
+    font-family: monospace;
+    color: #ddd;
+}
+
+/* BUTTONS */
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.btn.red {
+    background: #ff5f56;
+    cursor: pointer;
+}
+
+.btn.yellow {
+    background: #ffbd2e;
+    cursor: pointer;
+}
+
+.btn.green {
+    background: #27c93f;
+    cursor: pointer;
+}
+
+.download-btn {
+    color: #ff9f3f;
+    text-decoration: none;
+}
+/* RESUME CARD CENTER */
+.resume-card {
+    text-align:left;
+}
+
+/* DOWNLOAD BUTTON */
+.resume-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+
+    margin-top: 12px;
+    padding: 10px 18px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #ffb45c;
+    text-decoration: none;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 180, 92, 0.4);
+
+    background: rgba(255, 180, 92, 0.08);
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.resume-download:hover {
+    background: rgba(255, 180, 92, 0.18);
+    box-shadow: 0 0 18px rgba(255, 180, 92, 0.6);
+    transform: translateY(-2px);
+}
+.connect-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* EACH ITEM */
+.connect-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 10px 12px;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 14px;
+    color: #ccc;
+
+    transition: all 0.25s ease;
+}
+
+/* LINKS */
+.connect-item a {
+    color: #ffb45c;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+/* HOVER EFFECT */
+.connect-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 180, 92, 0.5);
+    box-shadow: 0 0 18px rgba(255, 180, 92, 0.25);
+}
+
+.connect-item:hover a {
+    color: #ffd199;
+}
+/* SKILLS GRID */
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+/* SKILL TAG */
+.skill {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ddd;
+
+    cursor: default;
+    transition: all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+.skill:hover {
+    background: rgba(255, 180, 92, 0.15);
+    border-color: rgba(255, 180, 92, 0.6);
+    color: #ffcf9a;
+
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px rgba(255, 180, 92, 0.35);
+}
+/* TERMINAL STYLE BLOCK */
+.about-terminal {
+    margin-top: 18px;
+    padding: 14px 16px;
+
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: #a8ff60;
+
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* EACH LINE */
+.about-terminal .terminal-line {
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+/* FIRST COMMAND LINE */
+.about-terminal .terminal-line:first-child {
+    color: #7df9ff;
+    margin-bottom: 6px;
+}
+/* ABOUT / RESUME / COMMON CARD STYLE */
+.about-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.25s ease;
+}
+
+/* SAME HOVER AS RESUME */
+.about-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 180, 92, 0.55);
+
+    box-shadow:
+        0 0 22px rgba(255, 180, 92, 0.25),
+        inset 0 0 12px rgba(255, 180, 92, 0.08);
+
+    transform: translateY(-2px);
+}
+/* ============================= */
+/* ABOUT ME CARD – FORCED STYLE */
+/* ============================= */
+
+.about-body .about-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition:
+        background 0.25s ease,
+        border 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-body .about-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 180, 92, 0.6);
+
+    box-shadow:
+        0 0 22px rgba(255, 180, 92, 0.25),
+        inset 0 0 10px rgba(255, 180, 92, 0.08);
+
+    transform: translateY(-2px);
+}

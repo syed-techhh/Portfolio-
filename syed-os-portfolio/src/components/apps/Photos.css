@@ -1,0 +1,162 @@
+/* =======================
+   PHOTOS WINDOW
+======================= */
+.photos-window {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 980px;
+    height: 560px;
+
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+/* =======================
+   MAXIMIZED MODE
+======================= */
+.photos-window.maximized {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 80px);
+    height: calc(100vh - 120px);
+}
+
+/* =======================
+   HEADER
+======================= */
+.photos-header {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.photos-title {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* =======================
+   WINDOW BUTTONS
+======================= */
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.btn.red {
+    background: #ff5f56;
+    cursor: pointer;
+}
+
+.btn.yellow {
+    background: #ffbd2e;
+    cursor: pointer;
+}
+
+.btn.green {
+    background: #27c93f;
+    cursor: pointer;
+}
+
+/* =======================
+   BODY
+======================= */
+.photos-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+/* =======================
+   LEFT SIDEBAR
+======================= */
+.photos-sidebar {
+    width: 260px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px;
+
+    overflow-y: auto;
+    /* ✅ SCROLL HERE */
+}
+
+.sidebar-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+/* =======================
+   PHOTO GRID (FIXED)
+======================= */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    align-content: start;
+    /* ✅ CRITICAL FIX */
+}
+
+.photos-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.85;
+
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.photos-grid img:hover {
+    opacity: 1;
+}
+
+.photos-grid img.active {
+    border-color: #ffb347;
+    opacity: 1;
+}
+
+/* =======================
+   RIGHT PREVIEW
+======================= */
+.photos-preview {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.03),
+            rgba(0, 0, 0, 0.95));
+}
+
+.photos-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* ✅ SAME LOOK AS FIRST IMAGE */
+    border-radius: 14px;
+}
