@@ -1,0 +1,145 @@
+.settings-window {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 880px;
+    height: 560px;
+    background: radial-gradient(circle at top, #111, #000 80%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+
+.settings-window.maximized {
+    top: 40px;
+    width: calc(100vw - 80px);
+    height: calc(100vh - 120px);
+}
+
+/* HEADER */
+.settings-header {
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ddd;
+}
+
+/* WINDOW BUTTONS */
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.btn.red {
+    background: #ff5f56;
+    cursor: pointer;
+}
+
+.btn.yellow {
+    background: #ffbd2e;
+    cursor: pointer;
+}
+
+.btn.green {
+    background: #27c93f;
+    cursor: pointer;
+}
+
+/* BODY */
+.settings-body {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.settings-title {
+    font-size: 26px;
+    color: #ffb45c;
+    margin-bottom: 18px;
+}
+
+.settings-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 18px;
+}
+
+.settings-card h3 {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* SLIDER – SAME AS MUSIC */
+.glow-slider {
+    width: 100%;
+    appearance: none;
+    height: 4px;
+    border-radius: 4px;
+    margin-top: 10px;
+    background: linear-gradient(to right,
+            #ff9f3f 0%,
+            #ff9f3f var(--val),
+            rgba(255, 255, 255, 0.15) var(--val),
+            rgba(255, 255, 255, 0.15) 100%);
+}
+
+.glow-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ff9f3f;
+    box-shadow: 0 0 18px rgba(255, 159, 63, 0.9);
+}
+
+.glow-slider:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 24px rgba(255, 159, 63, 1);
+}
+
+/* STATES */
+.active {
+    color: #4cd964;
+}
+
+.muted {
+    color: #888;
+}
+
+.error {
+    color: #ff5f56;
+}
+
+/* BLUETOOTH BUTTON */
+.bt-btn {
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.bt-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
