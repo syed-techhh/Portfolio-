@@ -100,7 +100,7 @@ export default function AboutMe({ onClose, onMinimize }) {
     <div className="connect-item">
       💼 LinkedIn:
       <a
-        href="https://www.linkedin.com/in/syed-awaiz"
+        href="https://www.linkedin.com/in/awaiz12/"
         target="_blank"
         rel="noopener noreferrer"
       >
