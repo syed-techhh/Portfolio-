@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./AboutMe.css";
-import profile from "../../assets/photos/photo7.jpeg"; // use your image
+import profile from "../../assets/photos/photo7.jpg"; // use your image
 
 export default function AboutMe({ onClose, onMinimize }) {
   const [maximized, setMaximized] = useState(false);
