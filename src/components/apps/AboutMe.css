@@ -1,23 +1,41 @@
 .about-window {
-    position: absolute;
-    top: 60px;
+position: absolute;
+    top: 90px;
     left: 50%;
     transform: translateX(-50%);
-    width: 900px;
-    height: 560px;
-    background: radial-gradient(circle at top, #111, #000 80%);
-    border-radius: 16px;
+
+    width: 720px;
+    height: 420px;
+
+    background: rgba(0, 0, 0, 0.96);
+    border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(18px);
+
+    z-index: 9999;
+
     display: flex;
     flex-direction: column;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
-    z-index: 999;
+
+    overflow: hidden;
 }
 
 .about-window.maximized {
-    top: 40px;
-    width: calc(100vw - 80px);
-    height: calc(100vh - 120px);
+    position: fixed;
+    
+        top: 42px;
+        left: 0;
+    
+        width: 100vw;
+        height: calc(100vh - 42px);
+    
+        transform: none;
+    
+        border-radius: 0;
+    
+        z-index: 99999;
 }
 
 /* HEADER */
@@ -43,16 +61,45 @@
 
 /* PROFILE */
 .about-profile {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
-    margin-bottom: 24px;
+
+    margin-bottom: 30px;
 }
 
 .about-profile img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
+
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 30px rgba(255, 180, 92, 0.4);
+    object-position: center top;
+
+    display: block;
+
+    border: 3px solid rgba(255, 180, 92, 0.4);
+
+    box-shadow:
+        0 0 30px rgba(255, 180, 92, 0.35),
+        0 0 60px rgba(255, 180, 92, 0.15);
+}
+
+.about-profile h1 {
+    margin-top: 18px;
+    font-size: 3rem;
+    color: #ffb45c;
+}
+
+.role {
+    margin-top: 4px;
+    font-size: 1.4rem;
+    color: #aaa;
 }
 
 .about-profile h1 {

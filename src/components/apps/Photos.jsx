@@ -8,8 +8,11 @@ import photo3 from "../../assets/photos/photo3.jpg";
 import photo4 from "../../assets/photos/photo4.jpg";
 import photo5 from "../../assets/photos/photo5.jpg";
 import photo6 from "../../assets/photos/photo6.jpg";
+import photo8 from "../../assets/photos/photo8.jpeg";
+import photo9 from "../../assets/photos/photo9.jpeg";
+import photo10 from "../../assets/photos/photo10.jpeg";
 
-const photos = [photo1, photo2, photo3, photo4, photo5, photo6];
+const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo8, photo9, photo10];
 
 export default function Photos({ onClose }) {
   const [selected, setSelected] = useState(0);

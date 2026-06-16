@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import AnimatedBackground from "../background/AnimatedBackground";
-import SettingsPanel from "./SettingsPanel"; // 🔹 top-right quick panel
+import SettingsPanel from "./SettingsPanel";
 import PowerPanel from "./PowerPanel";
 
 import Terminal from "./apps/Terminal";
@@ -8,9 +8,8 @@ import Browser from "./apps/Browser";
 import Files from "./apps/Files";
 import Photos from "./apps/Photos";
 import Music from "./apps/Music";
-import Settings from "./apps/Settings";// ✅ FULL SETTINGS APP
+import Settings from "./apps/Settings";
 import AboutMe from "./apps/AboutMe";
-
 
 export default function Desktop() {
   const [time, setTime] = useState(new Date());
@@ -27,9 +26,6 @@ export default function Desktop() {
   const [showMusic, setShowMusic] = useState(false);
   const [showSettingsApp, setShowSettingsApp] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
-  
-
-
 
   /* SYSTEM */
   const [brightness, setBrightness] = useState(80);
@@ -74,11 +70,10 @@ export default function Desktop() {
               day: "numeric",
               month: "short",
               hour: "2-digit",
-              minute: "2-digit"
+              minute: "2-digit",
             })}
           </span>
 
-          {/* 🔹 QUICK SETTINGS PANEL */}
           <span
             className="icon"
             onClick={() => {
@@ -89,7 +84,6 @@ export default function Desktop() {
             ⚙️
           </span>
 
-          {/* POWER */}
           <span
             className="icon power"
             onClick={() => {
@@ -116,61 +110,100 @@ export default function Desktop() {
 
       {/* APPS */}
       {showTerminal && <Terminal onClose={() => setShowTerminal(false)} />}
-      {showBrowser && <Browser onClose={() => setShowBrowser(false)} />}
+
+      {showBrowser && (
+        <Browser
+          onClose={() => setShowBrowser(false)}
+          onMinimize={() => setShowBrowser(false)}
+        />
+      )}
+
       {showFiles && <Files onClose={() => setShowFiles(false)} />}
+
       {showPhotos && <Photos onClose={() => setShowPhotos(false)} />}
-      {showMusic && <Music onClose={() => setShowMusic(false)} />}
 
-    {showSettingsApp && (
-  <Settings
-    brightness={brightness}
-    setBrightness={setBrightness}
-    volume={volume}
-    setVolume={setVolume}
-    onClose={() => setShowSettingsApp(false)}
-    onMinimize={() => setShowSettingsApp(false)}   // ✅ ADD THIS
-  />
-)}
-{showAbout && (
-  <AboutMe
-    onClose={() => setShowAbout(false)}
-    onMinimize={() => setShowAbout(false)}
-  />
-)}
+      {showMusic && (
+        <Music
+          onClose={() => setShowMusic(false)}
+          onMinimize={() => setShowMusic(false)}
+        />
+      )}
 
-{showBrowser && (
-  <Browser
-    onClose={() => setShowBrowser(false)}
-    onMinimize={() => setShowBrowser(false)}
-  />
-)}
+      {showSettingsApp && (
+        <Settings
+          brightness={brightness}
+          setBrightness={setBrightness}
+          volume={volume}
+          setVolume={setVolume}
+          onClose={() => setShowSettingsApp(false)}
+          onMinimize={() => setShowSettingsApp(false)}
+        />
+      )}
 
-{showMusic && (
-  <Music
-    onClose={() => setShowMusic(false)}
-    onMinimize={() => setShowMusic(false)}
-  />
-)}
+      {showAbout && (
+        <AboutMe
+          onClose={() => setShowAbout(false)}
+          onMinimize={() => setShowAbout(false)}
+        />
+      )}
 
       {/* DOCK */}
       <div className="dock">
-        <div className="dock-item" onClick={() => setShowTerminal(true)}>⌨️</div>
-        <div className="dock-item" onClick={() => setShowBrowser(true)}>🌐</div>
-        <div className="dock-item" onClick={() => setShowFiles(true)}>📁</div>
-        <div className="dock-item" onClick={() => setShowPhotos(true)}>🖼️</div>
-        <div className="dock-item" onClick={() => setShowMusic(true)}>🎵</div>
-        <div className="dock-item" onClick={() => setShowAbout(true)}>👤</div>
-
-
-        
-
-
-        {/* ✅ SETTINGS APP ICON */}
-        <div className="dock-item" onClick={() => setShowSettingsApp(true)}>
-          ⚙️
+        <div
+          className="dock-item"
+          onClick={() => setShowTerminal(true)}
+        >
+          <span className="dock-tooltip">Terminal</span>
+          ⌨
         </div>
 
-        
+        <div
+          className="dock-item"
+          onClick={() => setShowBrowser(true)}
+        >
+          <span className="dock-tooltip">Browser</span>
+          🌐
+        </div>
+
+        <div
+          className="dock-item"
+          onClick={() => setShowFiles(true)}
+        >
+          <span className="dock-tooltip">Files</span>
+          📁
+        </div>
+
+        <div
+          className="dock-item"
+          onClick={() => setShowPhotos(true)}
+        >
+          <span className="dock-tooltip">Photos</span>
+          🖼️
+        </div>
+
+        <div
+          className="dock-item"
+          onClick={() => setShowMusic(true)}
+        >
+          <span className="dock-tooltip">Music</span>
+          ♫
+        </div>
+
+        <div
+          className="dock-item"
+          onClick={() => setShowAbout(true)}
+        >
+          <span className="dock-tooltip">About Me</span>
+          👤
+        </div>
+
+        <div
+          className="dock-item"
+          onClick={() => setShowSettingsApp(true)}
+        >
+          <span className="dock-tooltip">Settings</span>
+          ⚙
+        </div>
       </div>
     </div>
   );

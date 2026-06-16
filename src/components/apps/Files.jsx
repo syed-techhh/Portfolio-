@@ -30,29 +30,41 @@ export default function Files({ onClose }) {
         <h2 className="folder-title">📁 My Projects</h2>
 
         {/* PROJECT 1 */}
-        <div className="project-card">
-          <h3>OD Management System</h3>
-          <p>
-            A web-based OD Management System that handles student on-duty
-            requests, approvals, and tracking in a structured digital format.
-          </p>
+<div className="project-card">
+  <h3>ODEX</h3>
 
-          <div className="tags">
-            <span>Web App</span>
-            <span>Management</span>
-            <span>College System</span>
-          </div>
+  <p>
+    ODEX is a smart On-Duty Management platform designed to streamline
+    student OD requests, approvals, tracking, and administration through
+    a modern digital workflow system.
+  </p>
 
-          <a
-            href="https://github.com/syed-techhh/OD-Management.git"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="view-code-btn"
-          >
-            View Code
-          </a>
-        </div>
+  <div className="tags">
+    <span>Web App</span>
+    <span>Management</span>
+    <span>College System</span>
+  </div>
 
+  <div className="project-actions">
+    <a
+      href="https://github.com/syed-techhh/ODEX.git"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="view-code-btn"
+    >
+      View Code
+    </a>
+
+    <a
+      href="/Project Report.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="report-btn"
+    >
+      View Project Report
+    </a>
+  </div>
+</div>
         {/* PROJECT 2 */}
         <div className="project-card">
           <h3>Real-Time Chat Application (MERN)</h3>
@@ -77,6 +89,14 @@ export default function Files({ onClose }) {
           >
             View Code
           </a>
+           <a
+            href="/chat-app-report.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="report-btn"
+          >
+            View Project Report
+  </a>
         </div>
 
         {/* PROJECT 3 */}

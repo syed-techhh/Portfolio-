@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./AboutMe.css";
-import profile from "../../assets/photos/photo7.jpg"; // use your image
+import profile from "../../assets/photos/photo7.jpeg"; // use your image
 
 export default function AboutMe({ onClose, onMinimize }) {
   const [maximized, setMaximized] = useState(false);
@@ -28,13 +28,16 @@ export default function AboutMe({ onClose, onMinimize }) {
           <img src={profile} alt="profile" />
           <h1>Syed Awaiz</h1>
           <p className="role">Data Analyst</p>
+          <p className="role">Software Engineer</p>
         </div>
 
         {/* ABOUT */}
         <div className="about-card">
           <h3>📦 About Me</h3>
           <p>
-            Data Analyst who loves working with data, extracting insights, and presenting them through clear visualizations. I also have software development experience, which helps me build efficient, data-driven applications and dashboards.
+           <p>
+  Software Engineer and Data Analyst with a passion for building data-driven applications and extracting actionable insights from complex datasets. Skilled in full-stack development, data analysis, visualization, and business intelligence using technologies such as React, Python, SQL, Power BI, and cloud platforms. I enjoy solving real-world problems through technology, analytics, and innovative solutions.
+</p>
           </p>
         </div>
 
@@ -60,7 +63,7 @@ export default function AboutMe({ onClose, onMinimize }) {
               "Python", "JavaScript", "React", "Node.js",
               "MongoDB", "Express", "Git", "GitHub",
               "IoT", "REST API", "Java", "SQL", "Power BI",
-                "Data Visualization","Cloud Computing"
+                "Data Visualization","Cloud Computing","MS Word","Excel","PostgreSQL","OOPS"
 
             ].map((s) => (
               <span key={s} className="skill">{s}</span>
@@ -74,8 +77,8 @@ export default function AboutMe({ onClose, onMinimize }) {
   <div className="connect-grid">
     <div className="connect-item">
       📧 Email:
-      <a href="mailto:syedawaiz@email.com">
-        syedawaiz@email.com
+      <a href="mailto:syedawaiz896@gmail.com">
+        syedawaiz896@gmail.com
       </a>
     </div>
 
@@ -116,7 +119,7 @@ export default function AboutMe({ onClose, onMinimize }) {
   <div className="terminal-line">System: SyedOS Portfolio v1.0</div>
   <div className="terminal-line">Status: Online</div>
   <div className="terminal-line">Uptime: Always Available</div>
-  <div className="terminal-line">Role: Data Analyst</div>
+  <div className="terminal-line">Role: Data Analyst  Software Engineer</div>
 </div>
 
 
